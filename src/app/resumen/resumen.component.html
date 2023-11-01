@@ -1,0 +1,81 @@
+  <section class="content" id="about">
+      <div  class="block-content" >
+          <h3 class="block-title">Perfil</h3>
+          <h3 class="subheading">¡Hola! soy {{perfilDto?.nombre +' '+ perfilDto?.apellido}} <strong>Desarrollador {{perfilDto?.interes}}</strong></h3>
+          <p>{{perfilDto?.descripcion}}</p>
+          <div class="info-list row">
+              <div class="col-sm-6"><span>Nombre : </span> {{perfilDto?.nombre +' '+ perfilDto?.apellido}}</div>
+              <div class="col-sm-6"><span>Fecha de Nacimiento : </span>{{perfilDto?.fechaNacimiento}}</div>
+              <div class="col-sm-6"><span>Dirección : </span>{{perfilDto?.direccion}}</div>
+              <div class="col-sm-6"><span>Email : </span>{{perfilDto?.email}} </div>
+              <div class="col-sm-6"><span>Telefono : </span>{{perfilDto?.telefono}}</div>
+              <div class="col-sm-6"><span>Interes : </span>{{perfilDto?.interes}}</div>
+          </div>
+      </div>
+      <div class="block-content">
+        <h3 class="block-title">LENGUAJES, FRAMEWORKS Y TECNOLOGÍAS</h3>
+        <ul>
+            <li><strong>Java:</strong> Nivel Junior</li>
+            <li><strong>C++:</strong> Nivel Básico</li>
+            <li><strong>TypeScript:</strong> Nivel Básico</li>
+            <li><strong>HTML:</strong> Nivel Junior</li>
+            <li><strong>CSS:</strong> Nivel Junior</li>
+            <li><strong>Spring Boot:</strong> Nivel Junior</li>
+            <li><strong>Angular:</strong> Nivel Básico</li>
+        </ul>
+    </div>
+      <div class="block-content">
+        <h3 class="block-title">Experiencia</h3>
+        <div class="timeline experience">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="exp-holder">
+                        <div *ngFor="let expex of experiencia">
+                          <div class="exp">
+                              <div class="hgroup">
+                                  <h4><span>{{ expex.cargo }}</span> - {{ expex.empresa }}</h4>
+                                  <h5> {{ expex.fecha }} </h5>
+                              </div>
+                              <p>{{ expex.descripcion }}</p>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block-content">
+        <h3 class="block-title">Formación Académica</h3>
+        <div class="timeline education">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="exp-holder">
+                      <div *ngFor="let edux of educacion">
+                        <div class="exp">
+                            <div class="hgroup">
+                                <h4>{{ edux.nombre }}</h4>
+                                <h5> {{ edux.fecha }} </h5>
+                            </div>
+                            <p>{{edux.centro}}, {{edux.provencia}} </p>
+                            <p></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="block-content">
+          <h3 class="block-title">Formación Complementaria</h3>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 service" *ngFor="let curso of educacionComple">
+              <div class="service-icon">
+                <i class="ion-laptop"></i>
+              </div>
+              <h4><span>{{ curso.nombre }}</span></h4>
+              <h6>{{ curso.fecha }}</h6>
+              <button type="button" class="btn btn-primary btn-sm2" (click)="openModal(curso)" >Ver</button>
+            </div>
+          </div>
+      </div>
+  </section>
