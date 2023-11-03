@@ -6,11 +6,12 @@ import { EducacionDto } from '../dto/educacion-dto';
 import { environment } from 'src/environments/environment.prod';
 import { EducacionCompDto } from '../dto/educacion-comp-dto';
 import { PerfilDto } from '../dto/perfil-dto';
+import { TecnologiaDto } from '../dto/tecnologia-dto';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CvabastidasService {
+export class CvMohammedService {
 
   private  apiURL: string =  environment.apiUrl
 
@@ -45,6 +46,9 @@ export class CvabastidasService {
 
   public CargarExperiencia(): Observable<ExperienciaDto[]>{
     return this.http.get<ExperienciaDto[]>(this.apiURL.concat('Experiencia.json'));
+  }
+  public CargarTecnologias(): Observable<TecnologiaDto[]> {
+    return  this.http.get<TecnologiaDto[]>(this.apiURL.concat('Tecnologias.json'));
   }
   
 }

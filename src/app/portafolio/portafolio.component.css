@@ -277,3 +277,14 @@
 .section-spacing {
     margin-bottom: -140px; /* Ajusta el valor a tu preferencia */
   }
+ /* Estilos para el contenido de la descripción */
+ .description-content {
+    margin-bottom: 20px; /* Espacio entre los elementos de la descripción */
+  }
+
+  /* Estilos para ajustar el diseño en pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .description-content {
+      margin-bottom: 10px; /* Espacio más pequeño en dispositivos móviles */
+    }
+  }

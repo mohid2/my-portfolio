@@ -12,16 +12,10 @@
               <div class="col-sm-6"><span>Interes : </span>{{perfilDto?.interes}}</div>
           </div>
       </div>
-      <div class="block-content">
+      <div class="block-content" >
         <h3 class="block-title">LENGUAJES, FRAMEWORKS Y TECNOLOGÍAS</h3>
-        <ul>
-            <li><strong>Java:</strong> Nivel Junior</li>
-            <li><strong>C++:</strong> Nivel Básico</li>
-            <li><strong>TypeScript:</strong> Nivel Básico</li>
-            <li><strong>HTML:</strong> Nivel Junior</li>
-            <li><strong>CSS:</strong> Nivel Junior</li>
-            <li><strong>Spring Boot:</strong> Nivel Junior</li>
-            <li><strong>Angular:</strong> Nivel Básico</li>
+        <ul *ngFor="let tecno of tecnologias">
+            <li><strong>{{tecno.nombre}}: </strong>{{tecno.nivel}}</li>
         </ul>
     </div>
       <div class="block-content">

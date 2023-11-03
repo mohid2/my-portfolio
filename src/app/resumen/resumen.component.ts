@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { CvabastidasService } from '../services/cvabastidas.service';
 import { ExperienciaDto } from '../dto/experiencia-dto';
 import { EducacionDto } from '../dto/educacion-dto';
 import { EducacionCompDto } from '../dto/educacion-comp-dto';
 import { CursoModalService } from '../services/curso-modal.service';
 import { PerfilDto } from '../dto/perfil-dto';
+import { CvMohammedService } from '../services/cvMohammed.service';
+import { TecnologiaDto } from '../dto/tecnologia-dto';
 
 @Component({
   selector: 'app-resumen',
@@ -16,12 +17,13 @@ export class ResumenComponent implements OnInit {
   experiencia: ExperienciaDto[] = [];
   educacion: EducacionDto[] = [];
   educacionComple: EducacionCompDto[] = [];
+  tecnologias: TecnologiaDto[]=[];
   perfilDto: PerfilDto;
 
 
   isModalOpen = false;
 
-  constructor(private cv: CvabastidasService,private modal:CursoModalService) {
+  constructor(private cv: CvMohammedService,private modal:CursoModalService) {
    }
 
   ngOnInit(): void {
@@ -37,7 +39,11 @@ export class ResumenComponent implements OnInit {
     this.cv.CargarPerfil().subscribe({
       next: value=> this.perfilDto=value
     });
+    this.cv.CargarTecnologias().subscribe({
+      next: value=> this.tecnologias=value
+    })
   }
+
 openModal(curso: EducacionCompDto){
   this.modal.openDialgo(curso);
 }

@@ -623,7 +623,7 @@ h2.blog.menu-item:before {
 }
 
 h2.contact.menu-item:before {
-    content: '04';
+    content: '03';
 }
 
 .menu-block:hover h2.menu-item:before {
@@ -2178,13 +2178,7 @@ h4.package {
         left: 897px;
         top: 179px;
     }
-    .blog-block {
-        -ms-transform: rotate(-34deg);
-        -webkit-transform: rotate(-34deg);
-        transform: rotate(-34deg);
-        left: 1092px;
-        top: 518px;
-    }
+    
     .contact-block {
         -ms-transform: rotate(-34deg);
         -webkit-transform: rotate(-34deg);
@@ -2228,13 +2222,7 @@ h4.package {
         left: 577px;
         top: 89px;
     }
-    .blog-block {
-        -ms-transform: rotate(-34deg);
-        -webkit-transform: rotate(-34deg);
-        transform: rotate(-34deg);
-        left: 772px;
-        top: 428px;
-    }
+   
     .contact-block {
         -ms-transform: rotate(-34deg);
         -webkit-transform: rotate(-34deg);
@@ -2278,15 +2266,7 @@ h4.package {
         width: 350px;
         height: 300px;
     }
-    .blog-block {
-        -ms-transform: rotate(-34deg);
-        -webkit-transform: rotate(-34deg);
-        transform: rotate(-34deg);
-        left: 753px;
-        top: 335px;
-        width: 350px;
-        height: 300px;
-    }
+ 
     .contact-block {
         -ms-transform: rotate(-34deg);
         -webkit-transform: rotate(-34deg);
@@ -2320,13 +2300,7 @@ h4.package {
         left: 577px;
         top: 89px;
     }
-    .blog-block {
-        -ms-transform: rotate(-34deg);
-        -webkit-transform: rotate(-34deg);
-        transform: rotate(-34deg);
-        left: 772px;
-        top: 428px;
-    }
+   
     .contact-block {
         -ms-transform: rotate(-34deg);
         -webkit-transform: rotate(-34deg);
@@ -2392,14 +2366,14 @@ h4.package {
         left: 577px;
         top: 89px;
     }
-    .blog-block {
+    .contact-block {
         -ms-transform: rotate(-34deg);
         -webkit-transform: rotate(-34deg);
         transform: rotate(-34deg);
         left: 336px;
         top: 548px;
     }
-    .contact-block {
+    .blog-block {
         -ms-transform: rotate(-34deg);
         -webkit-transform: rotate(-34deg);
         transform: rotate(-34deg);
@@ -2437,7 +2411,7 @@ h4.package {
 
 @media (max-width:800px) and (orientation:landscape) {
     .home {
-        background: url(../images/bg.jpg) #333 30% 30%;
+        background: url(../images/demo.jpeg) #333 30% 30%;
         overflow-y: scroll;
     }
     .name-block,
@@ -2457,7 +2431,7 @@ h4.package {
         left: 0;
         top: 0;
     }
-    .contact-block {
+    .blog-block {
         border-bottom: none;
     }
     .name-block-container,
@@ -2555,7 +2529,7 @@ h4.package {
         left: 0;
         top: 0;
     }
-    .contact-block {
+    .blog-block {
         border-bottom: none;
     }
     .about-block:hover,

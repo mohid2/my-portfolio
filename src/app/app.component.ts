@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CvabastidasService } from './services/cvabastidas.service';
 import { PerfilDto } from './dto/perfil-dto';
+import { CvMohammedService } from './services/cvMohammed.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   perfilDto: PerfilDto;
 
 
-  constructor(private cv: CvabastidasService){
+  constructor(private cv: CvMohammedService){
     
   }
   ngOnInit(): void {
