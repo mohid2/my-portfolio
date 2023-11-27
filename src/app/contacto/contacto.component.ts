@@ -25,15 +25,28 @@ export class ContactoComponent implements OnInit {
   }
 
   enviarMensaje(): void {
-    this.contactoService.sendEmail(this.data)
-      .then((response) => {
-        Swal.fire({
-          icon: 'success',
-          title: 'Mensaje enviado con exsito',
-          showConfirmButton: false,
-          timer: 3000})
-        // Manejar la respuesta exitosa aquí, por ejemplo, mostrar un mensaje al usuario.
-      })
+    // Validar que los campos no estén vacíos
+  if (!this.camposValidos()) {
+    // Mostrar un mensaje al usuario indicando que los campos son obligatorios
+    Swal.fire({
+      icon: 'warning',
+      title: 'Todos los campos son obligatorios',
+      showConfirmButton: false,
+      timer: 3000
+    });
+    return;
+  }
+  this.contactoService.sendEmail(this.data)
+  .then((response) => {
+    Swal.fire({
+      icon: 'success',
+      title: 'Mensaje enviado con éxito',
+      showConfirmButton: false,
+      timer: 3000
+    });
+    // Restablecer los campos a sus valores iniciales
+    this.resetearCampos();
+  })
       .catch((error) => {
         Swal.fire({
           icon: 'error',
@@ -42,6 +55,19 @@ export class ContactoComponent implements OnInit {
           timer: 3000})
         // Manejar errores aquí, por ejemplo, mostrar un mensaje de error al usuario.
       });
+  }
+  camposValidos(): boolean {
+    // Verificar que los campos necesarios no estén vacíos
+    return !!this.data.name && !!this.data.email && !!this.data.message;
+  }
+
+  resetearCampos(): void {
+    // Restablecer los campos a sus valores iniciales
+    this.data = {
+      name: '',
+      email: '',
+      message: ''
+    };
   }
 
 }
