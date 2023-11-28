@@ -11,4 +11,5 @@ export interface PerfilDto {
     linkedin:string
     github:string
     whatsapp:string
+    cv:string
 }
