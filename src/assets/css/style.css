@@ -2691,6 +2691,13 @@ h4.package {
     h2.contact.menu-item:before {
         content: ''; /* o cambia a otro valor si es necesario */
     }
+    /* Puedes ajustar el valor de margin-bottom según tus necesidades */
+.social {
+    margin-bottom: 15px; /* Ajusta según sea necesario */
+}
+.btn-download {
+    margin-bottom: -20px; /* Ajusta según sea necesario */
+}
 }
 @media (max-width:640px) {
     .author-box .col-sm-2,
