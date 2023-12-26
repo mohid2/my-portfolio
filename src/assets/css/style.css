@@ -2681,14 +2681,17 @@ h4.package {
     h2.menu-item:after {
         display: none;
     }
-    .social {
-        display: none;
-    }
+ 
     .project {
         width: 100%;
     }
+    h2.about.menu-item:before,
+    h2.portfolio.menu-item:before,
+    h2.blog.menu-item:before,
+    h2.contact.menu-item:before {
+        content: ''; /* o cambia a otro valor si es necesario */
+    }
 }
-
 @media (max-width:640px) {
     .author-box .col-sm-2,
     .author-box .col-sm-10 {
