@@ -12,11 +12,16 @@
               <div class="col-sm-6"><span>Interes : </span>{{perfilDto?.interes}}</div>
           </div>
       </div>
-      <div class="block-content" >
-        <h3 class="block-title">LENGUAJES, FRAMEWORKS Y TECNOLOGÍAS</h3>
-        <ul *ngFor="let tecno of tecnologias">
-            <li><strong>{{tecno.nombre}}: </strong>{{tecno.nivel}}</li>
-        </ul>
+    <div class="block-content">
+      <h3 class="block-title">LENGUAJES, FRAMEWORKS Y TECNOLOGÍAS</h3>
+      <ul class="icon">
+        <li *ngFor="let tecno of tecnologias">
+          <div>
+            <img class="round-image" src="{{tecno.url}}" alt="icon">
+            <span> {{tecno.nivel}} </span>
+          </div>
+        </li>
+      </ul>
     </div>
       <div class="block-content">
         <h3 class="block-title">Experiencia</h3>

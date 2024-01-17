@@ -1,0 +1,21 @@
+.block-content .icon {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.block-content .icon li {
+  width: calc(20% - 10px);
+  margin-bottom: 20px;
+}
+
+.round-image {
+  width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+  height: auto; /* Ajusta automáticamente la altura proporcionalmente */
+  max-width: 40px; /* Establece un máximo de 40px de ancho */
+  max-height: 40px; /* Establece un máximo de 40px de altura */
+  object-fit: contain;
+}
+
