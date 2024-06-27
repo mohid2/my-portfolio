@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Proyectdto } from '../dto/proyectdto';
+import { CvMohammedService } from '../services/cvMohammed.service';
 
 
 
@@ -9,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortafolioComponent implements OnInit {
 
-  constructor() { }
+  proyectos: Proyectdto[]=[];
+
+  constructor(private cv: CvMohammedService) { }
+
+
   ngOnInit(): void {
+    this.cv.CargarProyects().subscribe({
+      next: value=> this.proyectos=value
+    })
   }
 
   
 }
+

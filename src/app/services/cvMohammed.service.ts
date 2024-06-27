@@ -50,5 +50,8 @@ export class CvMohammedService {
   public CargarTecnologias(): Observable<TecnologiaDto[]> {
     return  this.http.get<TecnologiaDto[]>(this.apiURL.concat('Tecnologias.json'));
   }
+  public CargarProyects(): Observable<Proyectdto[]> {
+    return  this.http.get<Proyectdto[]>(this.apiURL.concat('proyectos/0.json'));
+  }
   
 }
