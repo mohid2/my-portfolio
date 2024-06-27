@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment.prod';
 import { EducacionCompDto } from '../dto/educacion-comp-dto';
 import { PerfilDto } from '../dto/perfil-dto';
 import { TecnologiaDto } from '../dto/tecnologia-dto';
+import { Proyectdto } from '../dto/proyectdto';
 
 @Injectable({
   providedIn: 'root'
